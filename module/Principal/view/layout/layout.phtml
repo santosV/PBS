@@ -1,0 +1,81 @@
+<?php echo $this->doctype(); ?>
+<?php $this->sesion = new Zend\Session\Container('user') ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Baja Salads')?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css')) 
+                        ->prependStylesheet($this->basePath('css/image-picker.css'))
+                        ->prependStylesheet($this->basePath('css/alertify.core.css'))
+                        ->prependStylesheet($this->basePath('css/alertify.default.css'))
+                        ->prependStylesheet($this->basePath('css/animate.css'))
+                        ->prependStylesheet($this->basePath('fonts.css'))
+                        ->prependStylesheet($this->basePath('css/home.css'))
+
+                        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+         <header>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+              <div class="row">
+                   <div class=" col-sm-6 col-xs-12 col-md-6">
+                      <a href="<?php echo $this->url('website-main'); ?>"><img src="<?php echo $this->BasePath() . '/img/logotipo.png'; ?>" alt="Logotipo BajaSalads" id="logoBjs" class="animated swing retraso-4"></a>
+                   </div>
+                    <?php if(empty($this->sesion->user_data)) {?>
+                    <div class="col-sm-6 col-xs-12 col-md-6"> 
+                    <a href="<?php echo $this->url('users-login'); ?>" class="btn btn-danger" id="btnLogin"><span class="glyphicon glyphicon-user"></span> Iniciar Sesión</a>
+                    </div> 
+                     <?php } else { ?>
+                      <div class="col-sm-6 col-xs-12 col-md-6"> 
+                        <div class="btn-group" id="btnLogout">
+                         <button class="btn  dropdown-toggle btnLogout text-center"  data-toggle="dropdown" data-hover="dropdown" ><span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $this->sesion->user_data['nombre']; ?> <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <li class="text-center"><img src="<?php echo $this->BasePath(); ?>/img/user.png" alt="avatar usuario" id="avatarUs"></li>
+                            <li class="divider"></li>
+                            <li ><a href="<?php echo $this->url('users-profile'); ?>"><span class="glyphicon glyphicon-user"></span> Perfil</a></li>
+                            <li ><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span> Carrito</a></li>
+                            <li ><a href="<?php echo $this->BasePath().'/user-logout'; ?>"><span class="glyphicon glyphicon-off"></span> Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+                    </div> 
+                  <?php } ?>
+                </div>
+                </div>
+            </div>
+        </div>
+      
+    </header>
+        <?php echo $this->content; ?>
+          <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/image-picker.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/main.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/crea_tu_ensalada.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/pedidoItems.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/alertify.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/carrito.js"></script>
+        <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/combo.js"></script>
+         <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/arma_tu_combo.js"></script>
+          <script type="text/javascript" src="<?php echo $this->basePath(); ?>/js/menu.js"></script>
+    </body>
+    <!--Fin Contacto-->
+           <!--inicio footer-->
+        <footer class="text-center clase-general">
+             <p>Copyright © 2016 Baja Salads Deli Express. Todos los derechos reservados.</p>
+         </footer>
+     <!--fin footer-->  
+</html>

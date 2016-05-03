@@ -1,0 +1,107 @@
+<?php 
+    $this->session = new Zend\Session\Container('user');
+    $id = $this->session->user_data['id'];
+    $productos= Array()
+?>
+
+              <!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+
+   <div class="container">
+   <div class="row">
+     <div class=" col-md-offset-1 col-md-10">
+        <div class="page-header text-center"><h1>TU ORDEN ESTÁ LISTA</h1></div>
+        <div>
+                    <hr>
+                   </div>
+      <div class="row">
+    <div class="col-xs-12 col-md-12">
+        
+          <div class="table-responsive">          
+              <table class="table  table-bordered text-center" >
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Precio unitario</th>
+                      <th>Cantidad</th>
+                      <th>Precio total</th>
+                      <th>Opciones</th>
+                    </tr>
+                    <?php foreach($this->ensaladas as $ensalada) { ?>
+                      <? array_push($productos, base64_encode(base64_encode($ensalada['id'])), base64_encode(base64_encode($ensalada['nombre'])),base64_encode(base64_encode($ensalada['precio'])),base64_encode(base64_encode($ensalada['cantidad']))); ?>
+                      <tr class="obtenerCarrito" id="<?php echo base64_encode(base64_encode($ensalada['id'])); ?>" type="<?php echo base64_encode(base64_encode("E")); ?>">
+                        <td><?php echo $ensalada['nombre']; ?></td>
+                        <td>$<?php echo $ensalada['precio']; ?></td>
+                        <td><?php echo $ensalada['cantidad']; ?></td>
+                        <td class="item_ttl">$<?php echo $ensalada['precio'] * $ensalada['cantidad']; ?></td>
+                        <td><button type="button" class="btn btn-danger item_detele"><span class="glyphicon glyphicon-trash"></span></button></td>
+                      </tr>
+                    <?php } ?>
+                    <?php foreach($this->productos as $producto) { ?>
+                      <? array_push($productos, base64_encode(base64_encode($producto['id'])), base64_encode(base64_encode($producto['nombre'])),base64_encode(base64_encode($producto['precio'])),base64_encode(base64_encode($producto['cantidad']))); ?>
+                      <tr class="obtenerCarrito" id="<?php echo base64_encode(base64_encode($producto['id'])); ?>" type="<?php echo base64_encode(base64_encode("P")); ?>" >
+                        <td><?php echo $producto['nombre']; ?></td>
+                        <td>$<?php echo $producto['precio']; ?></td>
+                        <td><?php echo $producto['cantidad']; ?></td>
+                        <td class="item_ttl">$<?php echo $producto['precio'] * $producto['cantidad']; ?></td>
+                        <td><button type="button" class="btn btn-danger item_detele"><span class="glyphicon glyphicon-trash"></span></button></td>
+                      </tr>
+                    <?php } ?>
+                    <?php foreach($this->combos as $combo) { ?>
+                      <? array_push($productos, base64_encode(base64_encode($combo['id'])), base64_encode(base64_encode($combo['nombre'])),base64_encode(base64_encode($combo['precio'])),base64_encode(base64_encode($combo['cantidad']))); ?>
+                      <tr class="obtenerCarrito" id="<?php echo base64_encode(base64_encode($combo['id'])); ?>" type="<?php echo base64_encode(base64_encode("C")); ?>" >
+                        <td><?php echo $combo['nombre']; ?></td>
+                        <td>$<?php echo $combo['precio']; ?></td>
+                        <td><?php echo $combo['cantidad']; ?></td>
+                        <td class="item_ttl">$<?php echo $combo['precio'] * $combo['cantidad']; ?></td>
+                        <td><button type="button" class="btn btn-danger item_detele"><span class="glyphicon glyphicon-trash"></span></button></td>
+                      </tr>
+                    <?php } ?>
+              </table>
+        </div>
+         <div class="form-group text-center">
+                         <span id="total">Total: <?php echo $this->total['total'];?></span>
+                </div>
+                <div id="pedido">
+                  
+                </div>
+      <center><input type="submit" value="Comprar" onclick="pagar('<?php echo implode(",",$productos);?>')" class="aceptar btn btn-success" style="width:200px"></center>
+    </div>
+</div>  
+       </div></div>
+   </div>
+   <br><br>

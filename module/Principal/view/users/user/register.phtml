@@ -1,0 +1,125 @@
+<?php
+    // within a view script
+    $form = $this->form;
+    $form->prepare();
+
+    // Assuming the "contact/process" route exists...
+    $form->setAttribute('action', $this->BasePath() . '/user-register');
+    $form->setAttribute('id', 'registerForm');
+
+    // Set the method attribute for the form
+    $form->setAttribute('method', 'post');
+
+    // Get the form label plugin
+    $formLabel = $this->plugin('formLabel');
+
+
+?>
+      <!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+<div class="container">
+       <h2 class="form-signin-heading text-center">Registro de usuario</h2>
+       <?php if ($this->flashMessenger()->hasMessages()) {?>
+          <br>
+          <div class="container">
+              <div id="message_register" class="alert alert-danger col-md-offset-2 col-md-8 text-center">
+                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <strong>Ups! </strong><?php echo $this->flashMessenger()->getMessages()[0]; ?>
+              </div>
+          </div>
+        <?php } ?>
+       <?php echo $this->form()->openTag($form); ?>
+                    
+                       <div class="col-md-offset-2 col-sm-offset-2 col-md-4 col-sm-4 col-xs-12">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <?php 
+                                    $nombre = $form->get('nombre');
+                                    echo $this->formInput($nombre);
+                                    echo $this->formElementErrors($nombre);
+                                ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo electrónico:</label>
+                                <?php 
+                                    $email = $form->get('email');
+                                    echo $this->formInput($email);
+                                    echo $this->formElementErrors($email);
+                                ?>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="direc">Dirección:</label>
+                                <?php 
+                                    $direccion = $form->get('direccion');
+                                    echo $this->formInput($direccion);
+                                    echo $this->formElementErrors($direccion);
+                                ?>
+                                <a id="btnUbicacion" class="glyphicon glyphicon-map-marker form-control-feedback"></a>
+                            </div>
+                       </div>    
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="form-group">
+                                <label for="tel">Telefono:</label>
+                                <?php 
+                                    $telefono = $form->get('telefono');
+                                    echo $this->formInput($telefono);
+                                    echo $this->formElementErrors($telefono);
+                                ?>
+                         </div>
+                         <div class="form-group">
+                                <label for="pass">Contraseña:</label>
+                                <?php 
+                                    $password = $form->get('password');
+                                    echo $this->formInput($password);
+                                    echo $this->formElementErrors($password);
+                                ?>
+                         </div>
+                         <div class="form-group">
+                                <label for="pass2">Repita contraseña:</label>
+                                <?php 
+                                    $password_repeat = $form->get('password_repeat');
+                                    echo $this->formInput($password_repeat);
+                                    echo $this->formElementErrors($password_repeat);
+                                ?>
+                         </div>
+                         
+                          <?php echo $this->formElement($form->get('send')); ?>
+                       </div>   
+        <?php echo $this->form()->closeTag(); ?>
+</div>
+

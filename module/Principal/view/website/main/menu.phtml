@@ -1,0 +1,485 @@
+<!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+<div class="container" id="AjusteMenu">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <div class="page-header text-center">
+     <h1>Menú</h1>
+ </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse1" >Paninis</h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body panel-body2">
+                  <img src="<?php echo $this->BasePath(); ?>/img/menu/Bpanini.jpg" alt="ensalada">
+<!--                  <p>1600 x 646 px.</p>-->
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Brooklin</strong></span>
+                          <span class="precio"><strong>$96</strong></span>
+                          <p>Pechuga de pavo, queso manchego, tocino,lechuga, tomate, aguacate y aderezo ranch.</p>
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Baja</strong></span>
+                          <span class="precio"><strong>$98</strong></span>
+                          <p>Roast beef, queso mozarella, pimiento morrón, queso crema, aderezo de durazno.</p>
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Florenta</strong></span>
+                          <span class="precio"><strong>$95</strong></span>
+                          <p>Pechuga de pavo, queso manchego, tomate, espinacas, champiñones, y aderezo chipotle.</p>
+                         </div>
+                        
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Veggie</strong></span>
+                          <span class="precio"><strong>$88</strong></span>
+                          <p>Queso panela marinado, tomate, alfalfa, cebolla morada, lechuga, aguacate y aderezo de pimiento.</p>
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Expresso</strong></span>
+                          <span class="precio"><strong>$82</strong></span>
+                          <p>Jamón ahumado, queso mozarella, tomate, lechuga, tocino, mayonesa y mostaza.</p>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                   <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse2" >Hamburguesas</h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                   <img src="<?php echo $this->BasePath(); ?>/img/menu/Bhambuguesa.jpg" alt="ensalada">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Baja Burguer</strong></span>
+                          <span class="precio"><strong>$90</strong></span>
+                          <p>Hamburguesa de sirlon, queso amarillo, tocino, pepinillos, tomate, cebolla, lechuga, aguacate, aderezo 1000 islas, acompañado de papas en gajos.</p>
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Hamburguesa Baja Chicken</strong></span>
+                          <span class="precio"><strong>$88</strong></span>
+                          <p>Hamburguesa de pollo, lechuga, tomate, chile verde, queso mozarella, papas sazonadas.</p>
+                         </div>
+                      </div>
+                     
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse3" >Sopas</h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                  <img src="<?php echo $this->BasePath(); ?>/img/menu/sopas.jpg" alt="sopa">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Sopa de tortilla</strong></span>
+                          <span class="precio"><strong>$55</strong></span>
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Sopa de tomate</strong></span>
+                          <span class="precio"><strong>$55</strong></span>
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Sopa de verduras</strong></span>
+                          <span class="precio"><strong>$55</strong></span>
+                         </div>
+                      </div>
+                     
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                   <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse4" >Cremas</h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                    <img src="<?php echo $this->BasePath(); ?>/img/menu/Bcrema.jpg" alt="ensalada">
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Crema de brocoli</strong></span>
+                          <span class="precio"><strong>$52</strong></span>
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Chile poblano</strong></span>
+                          <span class="precio"><strong>$52</strong></span>
+                         </div>
+                      </div>
+                     
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse5" >Baguettes</h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                     <img src="<?php echo $this->BasePath(); ?>/img/menu/Bbaguet.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Atlantic</strong></span>
+                          <span class="precio"><strong>$96</strong></span>
+                          <p>Atún ahumado, aceituna negra, cebolla morada, lechuga, mayonesa y mostaza.</p>
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Vegetariano</strong></span>
+                          <span class="precio"><strong>$88</strong></span>
+                          <p>Queso panela, alfalfa, queso cheddar, pimiento verde, cebolla morada, aderezo y cilantro.</p>
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Angus</strong></span>
+                          <span class="precio"><strong>$104</strong></span>
+                          <p>Roast beef, queso manchego, pimieto verde, cebolla morada, tocino y aderezo chipotle.</p>
+                         </div>
+                        
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>California</strong></span>
+                          <span class="precio"><strong>$88</strong></span>
+                          <p>Pechuga de pavo, alfalfa, queso mozarella, lechuga, tomate, aguacate y aderezo ranch.</p>
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Florida</strong></span>
+                          <span class="precio"><strong>$55</strong></span>
+                          <p>Omelette de huevo, pimiento, cebolla, tomate, queso mozarella, tocino, aderezo, mayonesa y mostaza.</p>
+                         </div>
+                           <div class="areasMenu">
+                          <span><strong>Baguette Philadelphia</strong></span>
+                          <span class="precio"><strong>$65</strong></span>
+                          <p>Filete de pescado, lechuga, tomate, alcaparras, philadelphia.</p>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse6" >Lasagna</h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                      <img src="<?php echo $this->BasePath(); ?>/img/menu/Blasagna.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Alfredo</strong></span>
+                          <span class="precio"><strong>$98</strong></span>
+                          <p>Deliciosa lasagna de pollo, bañada en salsa alfredo acompañada de pan con mantequilla y queso parmesano.</p>
+                         </div>
+                       
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Bolognesa</strong></span>
+                          <span class="precio"><strong>$98</strong></span>
+                          <p>Delciosa lasagna de carne en salsa bolognesa acompañada de pan con mantequilla y queso parmesano.</p>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse7" >Platillos</h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                   <img src="<?php echo $this->BasePath(); ?>/img/menu/Bplatillos.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Boneless</strong></span>
+                          <span class="precio"><strong>$87</strong></span>
+                          <p>Jugosas tiras de pechuga de pollo bañadas en nuestra salsa búfalo.</p>
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Fish & Chips</strong></span>
+                          <span class="precio"><strong>$105</strong></span>
+                          <p>Dedos de pescado empanizado acompañados con papas en gajos.</p>
+                         </div>
+                       
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Pechuga en salsa de melocotón</strong></span>
+                          <span class="precio"><strong>$125</strong></span>
+                          <p>Pechuga de pollo rellena con queso crema bañada en sala de melocotón acompañada de papas en gajos y ejotes envueltos en tocino.</p>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse8" >Pastas</h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                     <img src="<?php echo $this->BasePath(); ?>/img/menu/Bpastas.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Fettuccine de pollo</strong></span>
+                          <span class="precio"><strong>$120</strong></span>
+                          <p>Pasta fettuccine con pollo bañados con salsa alfredo, pan con mantequilla y parmesano.</p>
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Fettucinne de camarón</strong></span>
+                          <span class="precio"><strong>$135</strong></span>
+                          <p>Pasta fettuccine con camarón bañados con salsa alfredo,pan con mantequilla y parmesano.</p>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse9" >Frutas</h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+              <img src="<?php echo $this->BasePath(); ?>/img/menu/Byogurt.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Yogurt con frutas</strong></span>
+                          <span class="precio"><strong>$48</strong></span>    
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Ensalada de frutas</strong></span>
+                          <span class="precio"><strong>$65</strong></span>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+              <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse10" >Desayunos</h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                    <img src="<?php echo $this->BasePath(); ?>/img/menu/Bdesayunos.jpg" alt="desayuno">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Avena</strong></span>
+                          <span class="precio"><strong>$45</strong></span>   
+                          <p>Acompañado de plátano, pan tostado y pasas.</p> 
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Pancakes</strong></span>
+                          <span class="precio"><strong>$55</strong></span> 
+                          <p>3pz Acompañados de frutas de temporada y miel de vino tinto.</p>   
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Waffles</strong></span>
+                          <span class="precio"><strong>$65</strong></span>
+                          <p>Acompañados de fruta de temporada, miel y mantequilla.</p>
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Crema de trigo</strong></span>
+                          <span class="precio"><strong>$45</strong></span> 
+                          <p>Acompañada de platano y pan tostado.</p>   
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse11" >Omeletts</h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                    <img src="<?php echo $this->BasePath(); ?>/img/menu/Bomelet.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Omelette Florentina</strong></span>
+                          <span class="precio"><strong>$65</strong></span>   
+                          <p>Relleno de espinacas, hongos, queso mozzarella, salteados en mantequilla.</p> 
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Omelette Mediterraneo</strong></span>
+                          <span class="precio"><strong>$65</strong></span> 
+                          <p>Relleno de tomate al horno, queso, aceituna, albahaca fresca y alcaparras.</p>   
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Omelette de Camarón</strong></span>
+                          <span class="precio"><strong>$75</strong></span>
+                          <p>Relleno de camarón salteado, julianas de pimientos, cebollin, queso mozarella bañado en salsa de aguacate y cilantro.</p>
+                         </div>
+                         <div class="areasMenu">
+                          <span><strong>Omelette Vegetariano</strong></span>
+                          <span class="precio"><strong>$55</strong></span> 
+                          <p>Claras rellenas de vegetales de temporada blanqueados y marinados con aceite de oliva y queso panela.</p>   
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse12" >Combos</h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                      <img src="<?php echo $this->BasePath(); ?>/img/menu/ensalada.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Arma tu combo</strong></span>
+                          <span class="precio"><strong>$110</strong></span>   
+                          <p>Elije 2 de las siguientes opciones:</p> 
+                          <p>1/2 Panini, 1/2 Baguette, Ensalada chica , Sopa ó crema.</p>
+                          <p>*No aplica en baguette angus, baja, philadelphia y florida.</p>
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                 <h4  class="panel-title"  data-toggle="collapse" data-parent="#accordion" href="#collapse13" >Bebidas</h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse">
+                  <div class="panel-body panel-body2">
+                    <img src="<?php echo $this->BasePath(); ?>/img/menu/Bbebidas.jpg" alt="ensalada">
+                  <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                         <div class="areasMenu">
+                          <span><strong>Jugos</strong></span>
+                          <span class="precio"><strong>$30</strong></span>    
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Licuados</strong></span>
+                          <span class="precio"><strong>$30</strong></span>    
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Refrescos</strong></span>
+                          <span class="precio"><strong>$15</strong></span>    
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Agua natural</strong></span>
+                          <span class="precio"><strong>$12</strong></span>    
+                         </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                          <div class="areasMenu">
+                          <span><strong>Té helado</strong></span>
+                          <span class="precio"><strong>$17</strong></span>
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Café</strong></span>
+                          <span class="precio"><strong>$15</strong></span>    
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Aguas frescas</strong></span>
+                          <span class="precio"><strong>$12</strong></span>    
+                         </div>
+                          <div class="areasMenu">
+                          <span><strong>Ciel de sabor</strong></span>
+                          <span class="precio"><strong>$15</strong></span>    
+                         </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div> 
+      
+    </div>
+    </div>
+</div>
+                     </div>
+                </div>
+            </div>

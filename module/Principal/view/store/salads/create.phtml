@@ -1,0 +1,297 @@
+<?php
+include 'public/php/rename.php';
+$combo = 'false';
+$id_producto = 0;
+if (isset($_GET["pq"])) {
+    $combo =  $_GET['pq'];
+    $id_producto = $_GET["pt"];
+}
+?>    
+      <!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+<div class="container createSalads fondo">  
+  <div class="row">
+      <div class=" col-md-offset-1 col-md-10">
+      
+          <div class="row">
+            <div class="page-header text-center titles">
+               <h1 class="marginReset">CREA TU PROPIA ENSALADA</h1>
+               <h2 class="marginReset">Vive la experiencia Baja Salads</h2>
+            </div>
+            <div>
+              <hr>
+            </div>
+</div>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#paso1">TAMAÑO</a></li>
+    <li><a data-toggle="tab" href="#paso2">POLLO Y MARISCO</a></li>
+    <li><a data-toggle="tab" href="#paso3">BARRA FRIA</a></li>
+    <li><a data-toggle="tab" href="#paso4">ADEREZOS</a></li>
+     <li><a data-toggle="tab" href="#paso5">EXTRAS</a></li>
+  </ul>
+    <div class="col-xs-12 col-md-6">
+        <div class="tab-content">
+            <div id="paso1" class="tab-pane fade in active">
+          <h3></h3>
+            <div class="alert alert-info fade in" id="alert_inicial">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Información! </strong>Una vez seleccionado el siguiente paso no podrás cambiar tu tamaño de orden.
+            </div>
+            <select onChange="calcularCalorias()" id="porciones" class="image-picker show-labels show-html ingrdientes">
+                  <option value="nada">nada</option>
+                  <?php foreach($this->porciones as $porcion) {
+                        switch ($porcion['nombre']) {
+                          case 'Chica':
+                            $value = 'chico';
+                            break;
+                          case 'Mediana':
+                            $value = 'mediano';
+                            break;
+                          case 'Grande':
+                            $value = 'grande';
+                            break;
+                          default:
+                            $value = null;
+                            break;
+                        }
+                      
+                        if ($combo=='t') {
+                            if ($porcion['id'] != 47 && $porcion['id'] != 48) {
+                            echo '<option class="salad_size" id="'.$porcion['id'].'" data-id ="'.$porcion['id'].'" data-calfat="3" data-fat="10" data-satfat="10" data-chol="5"  data-sod="2" data-carbo="3" data-fiber="9" data-sugar="5" data-protein="10" data-transfat="4" data-cal="300" data-img-src="'.$this->BasePath().'/img/crea_ensalada/'.$value.'.png" value="'.$value.'">'.$porcion['nombre'].'</option>';
+                            }
+                        }else{
+                            echo '<option class="salad_size" id="'.$porcion['id'].'" data-id ="'.$porcion['id'].'" data-calfat="3" data-fat="10" data-satfat="10" data-chol="5"  data-sod="2" data-carbo="3" data-fiber="9" data-sugar="5.5" data-protein="10" data-transfat="4" data-cal="300" data-img-src="'.$this->BasePath().'/img/crea_ensalada/'.$value.'.png" value="'.$value.'">'.$porcion['nombre'].'</option>';
+                        }
+                    }?>
+
+            </select>
+          <input type="button" class="btn btn-primary btnSiguientevalid" value="Siguiente"/>
+
+          </div>
+          <div id="paso2" class="tab-pane fade">
+          <h3></h3> 
+           <h3 id="ayudaRMC"></h3>
+           <h3 id="ayudaRMM"></h3>
+            <h3 id="ayudaRMG"></h3>
+            <select id="pollos_mariscos" onChange="calcularCalorias()" class="image-picker show-labels limit_callback show-html ingrdientes" multiple="multiple">
+                  <option value="nada">nada</option>
+                  <?php 
+                      foreach($this->pollo_marisco as $pm){
+                        $picture = renombrarPic($pm['nombre']);
+                        echo '<option data-id ="'.$pm['id'].'" data-calfat="2" data-fat="8" data-satfat="7" data-chol="5" data-sod="2" data-carbo="3" data-fiber="9" data-sugar="5" data-protein="3" data-transfat="4" data-cal="20"  data-img-src="'.$this->BasePath().'/img/ingrediente/'.$picture.'.jpg" value="'.$pm['id'].'">'.$pm['nombre'].'</option>';
+                      }
+                   ?>
+            </select>
+            <input type="button" class="btn btn-primary btnSiguientevalid" value="Siguiente" />
+         </div>
+    <div id="paso3" class="tab-pane fade">
+    <h3></h3>
+           <h3 id="ayudaRBC"></h3>
+          <h3 id="ayudaRBM"></h3>
+           <h3 id="ayudaRBG"></h3>
+          <select id="barra_fria" onChange="calcularCalorias()" class="image-picker show-labels limit_callback show-html ingrdientes"  multiple="multiple">
+              <option value="nada">nada</option>
+              <?php 
+                  foreach($this->barra_fria as $bf){
+                    $picture = renombrarPic($bf['nombre']);
+                    echo '<option data-id ="'.$bf['id'].'" data-calfat="5" data-fat="8" data-satfat="7" data-chol="5" data-sod="2" data-carbo="3" data-fiber="9" data-sugar="5" data-protein="3" data-transfat="4" data-cal="32" data-img-src="'.$this->BasePath().'/img/ingrediente/'.$picture.'.jpg" value="'.$bf['id'].'">'.$bf['nombre'].'</option>';
+                  }
+               ?>
+                 
+        </select>
+         <a class="btn btn-primary btnAtras">Atras</a>
+         <a class="btn btn-primary btnSiguiente">Siguiente</a>
+    </div>
+    <div id="paso4" class="tab-pane fade">
+    <h3></h3> 
+    <h3 id="ayudaRAC"></h3>
+     <h3 id="ayudaRAM"></h3>
+      <h3 id="ayudaRAG"></h3>
+     <select id="aderezos" onChange="calcularCalorias()" class="image-picker show-labels limit_callback show-html ingrdientes" multiple="multiple">
+              <option value="nada">nada</option>
+              <?php 
+                  foreach($this->aderezo as $ad){
+                    $picture = renombrarPic($ad['nombre']);
+                      echo '<option data-id ="'.$ad['id'].'" data-calfat="2" data-fat="8" data-satfat="12" data-chol="5" data-sod="2" data-carbo="3" data-fiber="9" data-sugar="5" data-protein="3" data-transfat="4" data-cal="20" data-img-src="'.$this->BasePath().'/img/ingrediente/'.$picture.'.jpg" value="'.$ad['id'].'">'.$ad['nombre'].'</option>';
+                  }
+               ?>
+    </select>
+        <a class="btn btn-primary btnAtras">Atras</a>
+        <input type="button" class="btn btn-primary btnSiguiente" value="Siguiente"  />
+    </div>
+    <div id="paso5" class="tab-pane fade">
+    <h3></h3>
+        <h3 id="ayudaREC"></h3>
+         <h3 id="ayudaREM"></h3>
+          <h3 id="ayudaREG"></h3>
+        <select id="extras" onChange="calcularCalorias()" class="image-picker show-labels limit_callback show-htm ingrdientes" multiple="multiple">
+             <option value="nada">nada</option>
+              <?php 
+                  foreach($this->extra as $xt){
+                    $picture = renombrarPic($xt['nombre']);
+                      echo'<option data-id ="'.$xt['id'].'" data-calfat="8" data-fat="10" data-satfat="7" data-chol="5" data-sod="2" data-carbo="3" data-fiber="9" data-sugar="5" data-protein="9" data-transfat="4" data-cal="24" data-img-src="'.$this->BasePath().'/img/ingrediente/'.$picture.'.jpg" value="'.$xt['id'].'">'.$xt['nombre'].'</option>';
+                  }
+               ?>
+        </select>
+      
+        <a class="btn btn-primary btnAtras">Atras</a>
+       <button  type="button" class="btn btn-success btn-compra" data-toggle="modal" data-target="#nombra-ensalada">Finalizar</button>
+    </div>
+      </div>
+   </div>
+      <div class="modal fade" id="nombra-ensalada" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Nombra tu ensalada</h4>
+        </div>
+        <div class="modal-body">
+       <form id="finishSalad">
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" class="form-control" id="name" required autofocus placeholder="Nombre de tu ensalada">
+                </div>
+
+                <div class="form-group">
+                  <label >Cantidad:</label>
+                 <?
+                    if ($combo=='t') {?>
+                      <select class="form-control" id="cant">
+                            <option>1</option>
+                      </select>  
+                <?}else{?>
+                      <select class="form-control" id="cant">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                       
+                <?}?>
+                </div>
+               <div class="form-group">
+                  <label for="comment">Comentarios:</label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            <button type="submit" onclick="terminar();" class="btn btn-success btn-block "><span class="glyphicon glyphicon-shopping-cart" ></span> Añadir al carrito</button>
+        </form>
+        </div>
+        <div class="modal-footer">
+                
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-xs-12 col-md-6">
+    <h3 class="text-center title-tables">Información Nutrimental</h3>
+    <table class="table table-striped table-bordered text-center">
+        <thead>
+             <tr>
+                 <th class="text-center">Porción</th>
+                 <th class="text-center">Valor</th>
+             </tr>
+         </thead>
+         <tbody>
+              <tr>
+                 <td>Cal</td>
+                 <td id="cal">0g</td>
+              </tr>
+              <tr>
+                 <td>Cal/Fat</td>
+                 <td id="calfat">0g</td>
+              </tr>
+              <tr>
+                 <td>Fat</td>
+                 <td id="fat">0g</td>
+              </tr>
+              <tr>
+                 <td>SatFat</td>
+                 <td id="satfat">0g</td>
+              </tr>
+              <tr>
+                 <td>Chol</td>
+                 <td id="chol">0g</td>
+              </tr>
+              <tr>
+                 <td>Sod</td>
+                 <td id="sod">0g</td>
+              </tr>
+              <tr>
+                 <td>Carbo.</td>
+                 <td id="carbo">0g</td>
+              </tr>
+              <tr>
+                 <td>Fiber</td>
+                 <td id="fiber">0g</td>
+              </tr>
+              <tr>
+                 <td>Sugar</td>
+                 <td id="sugar">0g</td>
+              </tr>
+              <tr>
+                 <td>Protein</td>
+                 <td id="protein">0g</td>
+              </tr>
+              <tr>
+                 <td>TransFat</td>
+                 <td id="transfat">0g</td>
+              </tr>
+         </tbody>
+        </table>
+      </div>
+ </div>
+      </div>
+  </div>
+  
+</div>
+<br><br>
+<?
+  if ($combo=='t') {
+       ?><input type="hidden" id="combo" value="true"><?
+  }else{
+       ?><input type="hidden" id="combo" value="false"><?
+  }
+?>
+<input type="hidden" id="producto1" value="<? echo $id_producto; ?>">

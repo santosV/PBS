@@ -1,0 +1,339 @@
+<?php
+include 'public/php/rename.php';
+?>
+<!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+                      <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                    </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+<div class="container createSalads">
+ <div class="row">
+           <div class=" col-md-offset-1 col-md-10">
+                  <div class="row">
+                  <div id="paso1" class="tab-pane fade in active">
+               <div class="page-header text-center marginBottom">
+                   <h1 class="marginReset">ELIGE TUS PRODUCTOS</h1>
+                   <h2 class="marginReset">Vive la experiencia Baja Salads</h2>
+
+               </div>
+               <div>
+                    <hr>
+                   </div>
+                           <div class="col-xs-12 col-md-8">
+                           <div id="contentMenuCompra">
+                               <!--  
+                                 <button id="btnPanini">Paninis</button>
+                                 <button id="btnHamburguesa">Hamburguesas</button>
+                                 <button id="btnSopasM">Sopas</button>
+                                 <button id="btnCremaM">Cremas</button>
+                                 <button id="btnBaguetteM">Baguettes</button>
+                                 <button id="btnLasagnaM">Lasagnas</button>
+                                 <button id="btnPlatillosM">Platillos</button>
+                                 <button id="btnPastasM">Pastas</button>
+                                 <button id="btnFrutasM">Frutas</button>
+                                 <button id="btnDesayunoM">Desayunos</button>
+                                 <button id="btnOmeletteM">Omeletts</button>
+                                 <button id="bntBebidasM">Bebidas</button>
+                                 -->
+              <ul class="products">
+                        <li> 
+                            <img id="btnPanini" src="<?php echo $this->BasePath(); ?>/img/menupedido/panini.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Paninis</p> 
+                        </li>
+                         <li> 
+                            <img id="btnHamburguesa" src="<?php echo $this->BasePath(); ?>/img/menupedido/hamburguesa.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Hamburguesas</p> 
+                        </li>
+                         <li> 
+                            <img id="btnSopasM" src="<?php echo $this->BasePath(); ?>/img/menupedido/sopa.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Sopas</p> 
+                        </li>
+                         <li> 
+                            <img id="btnCremaM" src="<?php echo $this->BasePath(); ?>/img/menupedido/crema.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Cremas</p> 
+                        </li>
+                         <li> 
+                            <img id="btnBaguetteM" src="<?php echo $this->BasePath(); ?>/img/menupedido/baguette.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Baguettes</p> 
+                        </li>
+                         <li> 
+                            <img id="btnLasagnaM" src="<?php echo $this->BasePath(); ?>/img/menupedido/lasagna.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Lasagnas</p> 
+                        </li>
+                         <li> 
+                            <img  id="btnPlatillosM" src="<?php echo $this->BasePath(); ?>/img/menupedido/boneless.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Platillos</p> 
+                        </li>
+                        <li> 
+                            <img id="btnPastasM" src="<?php echo $this->BasePath(); ?>/img/menupedido/pasta.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Pastas</p> 
+                        </li>
+                        <li> 
+                            <img id="btnFrutasM" src="<?php echo $this->BasePath(); ?>/img/menupedido/frutas.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Frutas</p> 
+                        </li>
+                        <li> 
+                            <img id="btnDesayunoM" src="<?php echo $this->BasePath(); ?>/img/menupedido/desayunos.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Desayunos</p> 
+                        </li>
+                        <li> 
+                            <img id="btnOmeletteM"  src="<?php echo $this->BasePath(); ?>/img/menupedido/omelet.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Omelettes</p> 
+                        </li>
+                        <li> 
+                            <img id="bntBebidasM" src="<?php echo $this->BasePath(); ?>/img/menupedido/bebidas.jpg" alt="prueba" class="img-responsive zoom">
+                          <p class="product-title">Bebidas</p> 
+                        </li>
+             </ul>
+     
+                          </div>
+                          <div id="paniniM">
+                          <h3 id="productsName">PANINIS</h3>
+                            <select id="paninis" onChange="añadirPedido()" class="image-picker paninis show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->paninis as $panini)
+                                                    {
+                                                        $picture = renombrarPic($panini['nombre']);
+                                                        echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'. base64_encode(base64_encode($panini['id'])).'" data-nombre="'.$panini['nombre'].'" data-precio="'.$panini['precio'].'" value="'.$panini['id'].'">'.$panini['nombre'].'</option>';
+                                                    }
+
+                                                 ?>
+                            </select>
+                            <a href="#" class="btn btn-success" id="rPanini">Regresar</a>
+
+                          </div>
+                          <div id="hamburguesaM">
+                            <h3 id="productsName">HAMBURGUESAS</h3>
+                            <select id="hambur" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->hamburguesas as $hamburguesa)
+                                                    {
+
+                                                      $picture = renombrarPic($hamburguesa['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($hamburguesa['id'])).'" data-nombre="'.$hamburguesa['nombre'].'" data-precio="'.$hamburguesa['precio'].'"  value="'.$hamburguesa['id'].'">'.$hamburguesa['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                             </select>
+                             <a href="#" class="btn btn-success" id="rHamburguesa">Regresar</a>
+
+                          </div>
+                          <div id="sopasM">
+                            <h3 id="productsName">SOPAS</h3>
+                            <select id="sopas" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->sopas as $sopa)
+                                                    {
+                                                      $picture = renombrarPic($sopa['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($sopa['id'])).'" data-nombre="'.$sopa['nombre'].'" data-precio="'.$sopa['precio'].'"  value="'.$sopa['id'].'">'.$sopa['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rSopas">Regresar</a>
+                          </div>
+                          <div id="cremaM">
+                            <h3 id="productsName">CREMAS</h3>
+                             <select id="cremas" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->cremas as $crema)
+                                                    {
+                                                      $picture = renombrarPic($crema['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($crema['id'])).'" data-nombre="'.$crema['nombre'].'" data-precio="'.$crema['precio'].'"  value="'.$crema['id'].'">'.$crema['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                              <a href="#" class="btn btn-success" id="rCremas">Regresar</a>
+                          </div>
+                          <div id="baguetteM">
+                            <h3 id="productsName">BAGUETTES</h3>
+                            <select id="baguets" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->baguettes as $baguette)
+                                                    {
+                                                       $picture = renombrarPic($baguette['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($baguette['id'])).'" data-nombre="'.$baguette['nombre'].'" data-precio="'.$baguette['precio'].'"  value="'.$baguette['id'].'">'.$baguette['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rBaguettes">Regresar</a>
+                          </div>
+                          <div id="lasagnaM">
+                            <h3 id="productsName">LASAGNAS</h3>
+                             <select id="lasagna" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->lasagnas as $lasagna)
+                                                    {
+                                                      $picture = renombrarPic($lasagna['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($lasagna['id'])).'" data-nombre="'.$lasagna['nombre'].'" data-precio="'.$lasagna['precio'].'"  value="'.$lasagna['id'].'">'.$lasagna['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rLasagna">Regresar</a>
+                          </div>
+                          <div id="platillosM">
+                            <h3 id="productsName">PLATILLOS</h3>
+                            <select id="platillos" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->platillos as $platillo)
+                                                    {
+                                                      $picture = renombrarPic($platillo['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($platillo['id'])).'" data-nombre="'.$platillo['nombre'].'" data-precio="'.$platillo['precio'].'"  value="'.$platillo['id'].'">'.$platillo['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rPlatillos">Regresar</a>
+                          </div>
+                          <div id="pastasM">
+                            <h3 id="productsName">PASTAS</h3>
+                             <select id="pastas" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->pastas as $pasta)
+                                                    {
+                                                      $picture = renombrarPic($pasta['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($pasta['id'])).'" data-nombre="'.$pasta['nombre'].'" data-precio="'.$pasta['precio'].'"  value="'.$pasta['id'].'">'.$pasta['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rPastas">Regresar</a>
+                          </div>
+                          <div id="frutasM">
+                            <h3 id="productsName">FRUTAS</h3>
+                              <select id="frutas" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->frutas as $fruta)
+                                                    {
+                                                      $picture = renombrarPic($fruta['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($fruta['id'])).'" data-nombre="'.$fruta['nombre'].'" data-precio="'.$fruta['precio'].'"  value="'.$fruta['id'].'">'.$fruta['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rFrutas">Regresar</a>
+                          </div>
+                          <div id="desayunosM">
+                            <h3 id="productsName">DESAYUNOS</h3>
+                             <select id="desayunos" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->desayunos as $desayuno)
+                                                    {
+                                                      $picture = renombrarPic($desayuno['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($desayuno['id'])).'" data-nombre="'.$desayuno['nombre'].'" data-precio="'.$desayuno['precio'].'"  value="'.$desayuno['id'].'">'.$desayuno['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rDesayunos">Regresar</a>
+
+                          </div>
+                          <div id="omelettesM">
+                            <h3 id="productsName">OMELETTES</h3>
+                             <select id="omelets" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->omelettes as $omelette)
+                                                    {
+                                                      $picture = renombrarPic($omelette['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($omelette['id'])).'" data-nombre="'.$omelette['nombre'].'" data-precio="'.$omelette['precio'].'"  value="'.$omelette['id'].'">'.$omelette['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                               <a href="#" class="btn btn-success" id="rOmelettes">Regresar</a>
+                          </div>
+                          <div id="bebidasM">
+                            <h3 id="productsName">BEBIDAS</h3>
+                             <select id="bebidas" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                                                <option value="nada">nada</option>
+                                                <?php 
+                                                    foreach($this->bebidas as $bebida)
+                                                    {
+                                                      $picture = renombrarPic($bebida['nombre']);
+                                                      echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.base64_encode(base64_encode($bebida['id'])).'" data-nombre="'.$bebida['nombre'].'" data-precio="'.$bebida['precio'].'"  value="'.$bebida['id'].'">'.$bebida['nombre'].'</option>';
+                                                    }
+
+                                                ?>
+                                              </select>
+                                                <a href="#" class="btn btn-success" id="rBebidas">Regresar</a>
+                          </div>
+
+                           </div>
+                              <div class="col-xs-12 col-md-4">
+                                  <table id="tblPList" class="table table-striped table-bordered text-center">
+                                  <thead>
+                                       <tr>
+                                           <th class="text-center">Nombre</th>
+                                           <th class="text-center">Precio</th>
+                                           <th class="text-center">Cantidad</th>
+                                       </tr>
+                                   </thead>
+                                   <tbody id="pedido">
+
+                                   </tbody>
+                                  </table>
+                                  <div class="text-center">
+                                     <span id="total" class="">Total: $0</span>
+                              <div>  <button type="submit" onclick="enviarPedido()" class="btn btn-success" id="addCarritoMenu"><span class="glyphicon glyphicon-shopping-cart" ></span> Añadir al carrito</button></div>
+                                  </div>
+                             
+                            
+                                 <!--  <div class="row text-center">
+                                      <div class="col-xs-12 col-md-6"><span id="total">Total: $0</span></div>
+                                      <div class="col-xs-12 col-md-6"> <button type="submit" onclick="enviarPedido()" class="btn btn-success btn-block " id="addCarritoMenu"><span class="glyphicon glyphicon-shopping-cart" ></span> Añadir al carrito</button></div>
+                                  </div>
+                                  -->
+                                </div>
+                 </div>
+           </div>
+     </div>
+
+</div>
+</div>
+<br><br><br>

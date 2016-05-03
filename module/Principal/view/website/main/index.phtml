@@ -1,0 +1,293 @@
+      <nav id="menuHeader" class="menuHeaderF">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                         <li><a href="<?php echo $this->url('website-menu'); ?>">MENU</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="#contentServicio">SERVICIO A DOMICILIO</a></li>
+                         <li><a href="#areaContacto">CONTACTO</a></li>
+                   </ul>
+
+                   <ul id="redes">
+                      <li><a href="#"><span class="icon-facebook"></span></a></li>
+                      <li><a href="#"><span class="icon-twitter"></span></a></li>
+                      <li><a href="#"><span class="icon-youtube"></span></a></li>
+                      <li><a href="#"><span class="icon-instagram"></span></a></li>
+                   </ul>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+        <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+        <ul id="redesMobile">
+         <li><a href="#"><span class="icon-facebook"></span></a></li>
+          <li><a href="#"><span class="icon-twitter"></span></a></li>
+          <li><a href="#"><span class="icon-youtube"></span></a></li>
+          <li><a href="#"><span class="icon-instagram"></span></a></li>
+           </ul>
+       <nav class="menuMobile">
+         <ul>
+             <li><a href="<?php echo $this->url('website-menu'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENU</a></li>
+             <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+             <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+             <li><a href="#contentServicio"><span class="icon-truck"></span>SERVICIO A DOMICILIO</a></li>
+             <li><a href="#areaContacto"><span class="glyphicon glyphicon-earphone"></span>CONTACTO</a></li>
+         </ul>
+     </nav>
+     </div>
+     <!--Fin Header-menu -->
+     
+     <!--    INICIO SLIDER-->
+    <section id="myCarousel" class="carousel slide" data-ride="carousel"> 
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active"> <img src="<?php echo $this->BasePath(); ?>/img/slider/s1.jpg" alt="primer slide" class="sliderHeight">
+              <div class="container">
+                <div class="carousel-caption">
+        <!-- <h1>Vive la experiencia</h1>  <p><a class="btn btn-lg btn-primary" href="#" role="button">Crea tu ensalada</a></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="item"> <img src="<?php echo $this->BasePath(); ?>/img/slider/s2.jpg"  alt="segundo slide" class="sliderHeight">
+              <div class="container">
+                <div class="carousel-caption">
+                <!-- Contenido dentro de slide-->
+                </div>
+              </div>
+            </div>
+            <div class="item"> <img src="<?php echo $this->BasePath(); ?>/img/slider/s3.jpg" alt="tercer slide" class="sliderHeight">
+              <div class="container">
+                <div class="carousel-caption">
+                   <!-- Contenido dentro de slide-->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+   </section>
+    <!--    FIN SLIDER-->
+          <div class="container" >
+            <div class="row">
+                <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10" id="titlemenu titlemenuAjuste">
+                 <div class="row">
+                     <div class="col-xs-12 col-sm-6 col-md-6" id="titleMuestraMenu1">
+                         <h2>Nuestro Menú</h2>
+                     </div>
+                     <div class="col-xs-12  col-sm-6 col-md-6" id="titleMuestraMenu2">
+                         <a href="<?php echo $this->url('website-menu'); ?>" class="btn btn-success"><span class="glyphicon glyphicon-cutlery"> </span> Ver todo el Menú</a>
+                     </div>
+                 </div>
+      <!--    INICIO MENU-->                 
+            <section class="row" id="contentMuestraM">
+                   <div class=" col-md-4 muestraMenu col-sm-4 col-xs-6 ">
+                      <article class="contentMenu">
+                          <img src="<?php echo $this->BasePath(); ?>/img/ensaladas.jpg" alt="ensalada" class="img-responsive zoom">
+                          <div class="bordeMenu">
+                       <h3>Ensaladas</h3>
+                        <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <p>Ven y disfruta de nuestra gran variedad de ensaladas donde podrás saborear un exquisito sabor, además de cuidar tu salud con nuestros ingredientes saludables y bajos en grasa.</p>
+                     </div> 
+                      </article >
+                   </div> 
+                    <div class=" col-md-4 muestraMenu col-sm-4 col-xs-6 ">
+                      <article class="contentMenu">
+                          <img src="<?php echo $this->BasePath(); ?>/img/sd.JPG" alt="sandwish" class="img-responsive zoom">
+                          <div class="bordeMenu">
+                       <h3>Sándwich</h3>
+                    <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <p>Contamos con una gran variedad de sándwiches con los cuales podrás sentir ese sabor único que te ofrece Baja Salads,  además de brindar la energía suficiente para tu día.</p>
+                     </div> 
+                      </article>
+                   </div> 
+                   <div class=" col-md-4 muestraMenu col-sm-4 col-xs-6 ">
+                    <article class="contentMenu">
+                          <img src="<?php echo $this->BasePath(); ?>/img/combo.jpg" alt="combo" class="img-responsive zoom">
+                          <div class="bordeMenu">
+                       <h3>Combos</h3>
+                    <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <span class="glyphicon glyphicon-star"></span>
+                     <p>Aprovecha nuestros combos especiales con los cuales podrás llevar más por menos siendo desde 1/2 Panini, 1/2 Baguette, ensalada chica, sopa o crema.</p>
+                     </div> 
+                      </article>
+                   </div> 
+            </section>
+       <!--    FIN MENU-->       
+                 <!-- INICIO MUESTRA MENU MOBILE-->  
+                    <section>  
+                     <article class="contentMenu2">
+                          <img src="<?php echo $this->BasePath(); ?>/img/ensaladas.jpg" alt="ensalada" class="img-responsive">
+                          <div class="bordeMenu">
+                             <h3>Ensaladas</h3>
+                             <span class="glyphicon glyphicon-star"></span>
+                             <span class="glyphicon glyphicon-star"></span>
+                             <span class="glyphicon glyphicon-star"></span>
+                             <span class="glyphicon glyphicon-star"></span>
+                             <span class="glyphicon glyphicon-star"></span>
+                             <p>Ven y disfruta de nuestra gran variedad de ensaladas donde podrás saborear un exquisito sabor, además de cuidar tu salud con nuestros ingredientes saludables y bajos en grasa.</p>
+                     </div> 
+                      </article >
+                      <article class="contentMenu2">
+                         <img src="<?php echo $this->BasePath(); ?>/img/sd.JPG" alt="sandwish" class="img-responsive">
+                            <div class="bordeMenu">
+                                 <h3>Sándwich</h3>
+                                 <span class="glyphicon glyphicon-star"></span>
+                                 <span class="glyphicon glyphicon-star"></span>
+                                 <span class="glyphicon glyphicon-star"></span>
+                                 <span class="glyphicon glyphicon-star"></span>
+                                 <span class="glyphicon glyphicon-star"></span>
+                                 <p>Contamos con una gran variedad de sándwiches con los cuales podrás sentir ese sabor único que te ofrece Baja Salads,  además de brindar la energía suficiente para tu día.</p>
+                             </div> 
+                      </article>
+                      <article class="contentMenu2">
+                             <img src="<?php echo $this->BasePath(); ?>/img/combo.jpg" alt="combo" class="img-responsive ">
+                                  <div class="bordeMenu">
+                                     <h3>Combos</h3>
+                                     <span class="glyphicon glyphicon-star"></span>
+                                     <span class="glyphicon glyphicon-star"></span>
+                                     <span class="glyphicon glyphicon-star"></span>
+                                     <span class="glyphicon glyphicon-star"></span>
+                                     <span class="glyphicon glyphicon-star"></span>
+                                     <p>Aprovecha nuestros combos especiales con los cuales podrás llevar más por menos siendo desde 1/2 Panini, 1/2 Baguette, ensalada chica, sopa o crema.</p>
+                             </div> 
+                      </article>
+                    </section>  
+                 <!-- FIN MUESTRA MENU MOBILE-->  
+            </div>
+             </div>
+        </div> 
+         <!--Inicio parallax 1-->
+     <div class="pagina1 parallax" data-movimiento="10">
+            <div class="panel-body page1article col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                  <h1>¡TU SALUD NOS IMPORTA!</h1>
+                  <p class="subtext text-justify"> Cada uno de nuestros productos es elaborado
+                      cuidando cada una de las calorías que contiene,
+                      con la finalidad de que alcances ese peso ideal 
+                      que siempre haz buscado.</p>
+                <div class="desktop">
+                  <h5 class="unete">UNETE A BAJA SALADS</h5>
+                  <button onclick=" location.href='http://localhost/BSTest/public/user-register/'"type="button" class="btn botonR">REGISTRATE</button>
+                </div>
+            </div>
+     </div>
+      <!--Fin parallax 1-->
+        <div id="contentAbout">
+     <div class="container">
+         <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                 <div class="row">
+                    <div class="col-xs-12   col-sm-12 col-md-12" id="about">
+                      <h3 class="text-center">ACERCA DE</h3>
+                   </div>
+                 </div>
+                 <div class="row" id="contentAboutheigth">
+                <div class="col-xs-12  col-sm-6 col-md-6" >
+                  <h3 class="text-center subtitle">Misión</h3>
+                  <p class="text-justify">Nuestra misión es hacer que Baja Salads sea un Restaurante de ensaladas frescas y deliciosas, así como de alimentos cocinados, creado para satisfacer las necesidades de nuestros clientes, ofreciendo productos de la más alta calidad, dando un trato amable y un excelente servicio tanto en el mostrador como en el servicio a domicilio. En Baja Salads nos comprometemos a crear productos innovadores para brindar gran variedad y seguir creciendo como empresa.</p>
+                
+            </div>
+            <div class="col-xs-12  col-sm-6 col-md-6">
+                  <h3 class="text-center subtitle">Visión</h3>
+                  <p class="text-justify">Ser el mejor Restaurante de ensaladas y alimentos cocinados dentro de la región, logrando ser el preferido por nuestros clientes, buscando la calidad de nuestros productos de manera continúa para poder expandirnos a nivel estado.</p>
+               
+            </div>
+            </div>
+     </div>
+    </div>
+    </div>
+    <!--Inicio parallax 2-->
+    <div class="pagina2 parallax" data-movimiento="10">
+          <div class="page3content">
+            <p class="textpage3 text-justify col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            Suponer que la comida es la única fuente de felicidad es negar todos los estímulos que nos ofrece la vida. Come lo justo y tendrás un físico saludable para disfrutar de todo lo que la vida te puede ofrecer</p>
+          </div>
+            <p class="firma text-right col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">-Herbert M. Shelton.</p>
+     </div>
+    <!--Fin parallax 2-->
+     <!--INICIO SERVICIO A DOMICILO-->
+     <div id="contentServicio">
+     <div class="container">
+         <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                 <div class="row">
+                    <div class="col-xs-12   col-sm-12 col-md-12" id="serv">
+                      <h3 class="text-center"></h3>
+                   </div>
+                 </div>
+                 <div class="row" id="contentServheigth">
+              <!--   <div class="col-xs-12  col-sm-6 col-md-6" >
+                  <h3 class="text-center subtitle">Ubicación</h3>
+        
+                
+            </div> -->
+            <div class="text-center col-xs-12   col-sm-4  col-md-4">
+                  <h3 class="text-center subtitle">Dirección</h3>
+                  <p>Baja Salads Ensenada Chica y Blvd. Benito Juarez, Local 5, Plaza Comercial, Col. Las Villas Guaymas, Sonora, México</p>
+            </div>
+            <div class="text-center col-xs-12   col-sm-4  col-md-4">
+                   <h3 class="text-center subtitle">Horario</h3>
+                   <p>Lunes a viernes: 7:00 AM - 9:00 PM</p>
+                   <p>Sábado: 8:00 AM - 9:00 PM</p>
+                   <p>Domingo: 10:00 AM - 6:00 PM</p>
+            </div>
+            <div class="text-center col-xs-12   col-sm-4  col-md-4">
+                    <h3 class="text-center subtitle">Informes</h3>
+                 <p><span class="glyphicon glyphicon-earphone"></span> Tel: 622 224-3029</p>
+                 <p><span class="glyphicon glyphicon-envelope"></span> Email:  info@bajasalads.com</p>
+
+            </div>
+            </div>
+
+     </div>
+    </div>
+    </div>
+       <!--FIN SERVICIO A DOMICILO-->
+        <!--Inicio Contacto-->
+        <div class="container" id="areaContacto">
+              <h3 class="text-center subtitle">Contacto</h3>
+              <div class="row" id="contacto">
+                  <div class="col-md-6 col-sm-6  col-xs-12">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" required  placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="correo" required placeholder="example@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Teléfono:</label>
+                                <input type="tel" class="form-control" id="tel" required placeholder="Telefono">
+                            </div>
+                       
+                           <div class="form-group">
+                              <label for="comment">Comentarios:</label>
+                              <textarea class="form-control" rows="5" id="comment" required></textarea>
+                               
+                            </div>
+                          <button type="submit" class="btn btn-success btn-block" id="enviarmsj">Enviar</button>
+                        
+                    </form>
+                  </div>
+                   <div class="col-md-6 col-sm-6  col-xs-12">      
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.2999002996153!2d-110.92119768493315!3d27.923449982702866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86c97a91bed45ee3%3A0xf300ce768efff4ea!2sBaja+Salads+Deli+Express!5e0!3m2!1ses!2smx!4v1459584137523" id="maps" frameborder="0" style="border:0" ></iframe>
+                   </div>
+              </div>
+        </div>
+    

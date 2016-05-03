@@ -1,0 +1,84 @@
+<?php
+include 'public/php/rename.php';
+if (isset($_GET["pq"])) {
+    $combo= $_GET["pq"];
+    if (isset($_GET["and"])) {
+        $direccion = $_GET["and"];
+    }else{
+        $direccion = "ninguno";
+        $id_producto = $_GET["pt"];
+    }
+}
+
+?>       
+      <!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+    <div class="container createSalads">
+    	<div class="row">
+     		<div class=" col-md-offset-1 col-md-10">
+            <div>
+              <hr>
+            </div>
+              <div class="page-header text-center">
+             <h1 class="marginReset">ARMA TU COMBO</h1>
+             <h2 class="marginReset">Vive la experiencia Baja Salads</h2>
+         </div>
+          <div>
+              <hr>
+            </div>
+                  <h3 id="indicacion" class="text-center selecciona">Elige tu <? echo $combo?></h3>
+                  <div id="wrap">
+                  <select id="items" onChange="añadirPedido()" class="image-picker show-labels show-html articulos"  multiple="multiple">
+                      <option value="nada">nada</option>
+                      <?php 
+                          foreach($this->$combo as $item)
+                          {
+                              $picture = renombrarPic($item['nombre']);
+                              echo '<option data-img-src="'.$this->BasePath().'/img/menupedido/'.$picture.'.jpg" data-id="'.$item['id'].'" data-nombre="'.$item['nombre'].'" data-precio="'.$item['precio'].'" value="'.$item['id'].'">'.$item['nombre'].'</option>';
+                          }
+
+                       ?>
+                    </select>
+                    <input type="hidden" id="nextItem" value="<? echo $direccion; ?>">
+                    <button onclick="registrar()" class="btn btn-success">Siguiente</button>
+                    <input type="hidden" id="producto1" value="<? echo $id_producto; ?>">
+                  </div>
+
+			</div>
+		</div>
+	</div>

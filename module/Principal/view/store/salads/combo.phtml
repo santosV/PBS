@@ -1,0 +1,221 @@
+      <!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+    <div class="container createSalads">
+       
+       <div class="row">
+           <div class=" col-md-offset-1 col-md-10">
+                <div class="row">
+
+           <ul class="nav nav-tabs" id="normal-tabs2">
+             <li class="active"><a data-toggle="tab" href="#paso1">1 Producto</a></li>
+            <li><a data-toggle="tab" href="#paso2">Pollos y Mariscos</a></li>
+            <li><a data-toggle="tab" href="#paso3">Barra fría</a></li>
+            <li><a data-toggle="tab" href="#paso4">Aderezos</a></li>
+             <li><a data-toggle="tab" href="#paso5">Extras</a></li>
+          </ul>
+            <div class="col-md-12 col-xs-12"> 
+                <div class="tab-content">
+               
+            <div id="paso1" class="tab-pane fade in active">
+               <div class="page-header text-center">
+                 <h1 class="marginReset">ARMA TU COMBO</h1>
+                 <h2 class="marginReset">Vive la experiencia Baja Salads</h2>
+               </div>
+               <div>
+                <hr>
+              </div>
+                <h3 id="indicacion" class="text-center selecciona">Selecciona los dos productos de tu combo</h3>
+                <div id="wrap">
+                 <select id="armaCombo" multiple="multiple" class=" image-picker show-labels limit_callback show-html ">
+                      <option value="nada">nada</option>
+                      <option  data-paq="panini"  data-img-src="<?php echo $this->BasePath(); ?>/img/menupedido/panini.jpg" value="1">Paninis</option>
+                      <option data-paq="baguette"  data-img-src="<?php echo $this->BasePath(); ?>/img/menupedido/baguette.jpg" value="2">Baguette</option>
+                      <option data-paq="ensalada"  data-img-src="<?php echo $this->BasePath(); ?>/img/menupedido/ensalada.jpg" value="3">Ensalada chica</option>
+                      <option data-paq="sopa"  data-img-src="<?php echo $this->BasePath(); ?>/img/menupedido/sopa.jpg" value="4">Sopa</option>
+                      <option  data-paq="crema" data-img-src="<?php echo $this->BasePath(); ?>/img/menupedido/crema.jpg" value="5">Crema</option>
+                      
+                  </select>
+                  <button onclick="armarCombo()" class="btn btn-success">Siguiente</button>
+                  </div>
+                  </div><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="paso2" class="tab-pane fade">
+            <h2 class="creaEn2 text-center">Crea tu ensalada</h2> 
+          <h3>Pollos y Mariscos</h3> 
+             <h3 id="ayudaR">Seleciona 1 de las siguientes opciones*</h3>
+            <select id="pollos_mariscos2" class="image-picker show-labels limit_callback show-html" multiple="multiple">
+                  <option value="nada">nada</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="1">Asado</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="2">Picoso</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="3">BBQ</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="4">Búfalo</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="5">Parmesano</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="7">Atún</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="8">Surimi</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="9">Cute Kitten </option>
+            </select>
+             <a class="btn btn-primary btnAtras">Atras</a>
+            <a class="btn btn-primary btnSiguiente">Siguiente</a>
+         </div>
+    <div id="paso3" class="tab-pane fade">
+                    <h2 class="creaEn2 text-center">Crea tu ensalada</h2> 
+                    <h3>Barra fría</h3>
+                      <h3 id="ayudaR">Seleciona 3 de las siguientes opciones*</h3>
+                  <select id="barra_fria2" class="image-picker show-labels limit_callback show-html"  multiple="multiple">
+                      <option value="nada">nada</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="1">Mango</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="2">Uva</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="3">Manzana</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="4">Plátano</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="5">Sandía</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="6">Mango</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="7">Uva</option>
+                      <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="8">Manzana</option>
+
+                </select>
+                 <a class="btn btn-primary btnAtras">Atras</a>
+                 <a class="btn btn-primary btnSiguiente">Siguiente</a>
+    </div>
+    <div id="paso4" class="tab-pane fade">
+        <h2 class="creaEn2 text-center">Crea tu ensalada</h2> 
+        <h3>Aderezos</h3> 
+          <h3 id="ayudaR">Seleciona 2 de las siguientes opciones*</h3>
+         <select id="aderezos2" class="image-picker show-labels limit_callback show-html" multiple="multiple">
+                  <option value="nada">nada</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="1">Ranch</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="2">Chipotle</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="3">Cilantro</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="4">Mil islas</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="5">César</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="6">Vinagreta</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="7">Italiano</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="8">Aceite de Oliva</option>
+                  <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="9">Mostaza miel</option>
+        </select>
+            <a class="btn btn-primary btnAtras">Atras</a>
+            <a class="btn btn-primary btnSiguiente">Siguiente</a>
+    </div>
+        <div id="paso5" class="tab-pane fade">
+         <h2 class="creaEn2 text-center">Crea tu ensalada</h2> 
+    <h3>Croutones</h3>
+         <h3 id="ayudaR">Seleciona 1 de las siguientes opciones*</h3>
+        <select id="extras2" class="image-picker show-labels limit_callback show-htm" multiple="multiple">
+              <option value="nada">nada</option>
+              <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="1">Croutones</option>
+              <option data-img-src="<?php echo $this->BasePath(); ?>/img/sd.jpg" value="2">Sopita</option>
+        </select>
+        <a class="btn btn-primary btnAtras">Atras</a>
+        <button type="button" class="btn btn-success btn-compra" data-toggle="modal" data-target="#nombra-ensalada">Terminar</button>
+    </div>     
+     <div class="modal fade" id="nombra-ensalada" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Nombra tu ensalada</h4>
+        </div>
+        <div class="modal-body">
+       <form>
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" class="form-control" id="name" required autofocus placeholder="Nombre de tu ensalada">
+                </div>
+                 <div class="form-group">
+                                  <select class="form-control" id="cant">
+                                    <option >1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                  </select>
+                               </div>
+               <div class="form-group">
+                  <label for="comment">Comentarios:</label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+         <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-shopping-cart" ></span> Añadir al carrito</button>
+        </form>
+              
+        </div>
+        <div class="modal-footer">
+                
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+ </div>
+           
+        </div>
+           </div>
+       </div>
+       
+    </div>
+
+                    
+                   

@@ -1,0 +1,380 @@
+/*Inicio pregunta de ingrediente extra*/
+.alertify {
+   background: #FFF;
+    border: 5px solid #333;
+    box-shadow: 0px 0px 10px #000;
+        top: 238px;
+}
+.alertify-button-cancel, .alertify-button-cancel:hover, .alertify-button-cancel:focus {
+    background-color: #ea675d;
+    border: 1px solid #ea675d;
+}
+.alertify-button-ok, .alertify-button-ok:hover, .alertify-button-ok:focus {
+    background-color: #0bbe5f;
+    border: 1px solid #0bbe5f;
+}
+.titles{
+    margin-bottom: 20px;
+}
+
+
+.marginReset{
+  margin:0;
+}
+
+.createSalads{
+  padding-top: 20px;
+}
+
+/*Fin pregunta de ingrediente extra*/
+/*Ayuda en pasos*/
+h3#ayudaR,#ayudaRMC,#ayudaRBC,#ayudaRAC,#ayudaREC,#ayudaRMM,#ayudaRBM,#ayudaRAM,#ayudaREM,#ayudaRMG,#ayudaRBG,#ayudaRAG,#ayudaREG{
+         color: #757575;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+.titleEnsa{
+    color:#FF4500;
+}
+.SiguienteCombo{
+    margin-bottom: 10px;
+}
+
+#wrap { 
+  margin:0 auto 0 auto; 
+  width:550px; 
+}
+
+#normal-tabs2{display: none;}
+.creaEn2{
+   color: #333;
+}
+.btn-danger,.btn-success{
+    margin-bottom: 5px;
+}
+#hist{
+    margin-bottom: 40px;
+}
+.padding{
+    padding-right: 15px; 
+     padding-left: 0px; 
+}
+/*Fin de ayuda en paso*/
+#logo-compras{
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+#logoCarrito{
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 6px;
+}
+.page-header>h1{
+color:#3C3C3C;;
+}
+.page-header h2{
+ color:#FFA500;
+}
+.title-tables,.tab-content h3 {
+ color: #FFA500;
+}
+/*Inicio carrito de compras*/
+.panel-title>a{
+    text-decoration: none;
+}
+.table-responsive {
+    width: 100%;
+    height: 270px;
+    margin-bottom: 15px;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: auto;  
+}
+.panel-default>.panel-heading { 
+    color:#FF4500;
+    border-color: #ddd;
+    cursor: pointer;
+    background-color: #fff;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+}
+/*Inicio Crea tu ensalada*/
+.tab-content img{
+    height: 70px;
+    width: 80px;
+    cursor:pointer;
+}
+.container .nav li {
+    width: 20%;
+    pointer-events: none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #f1f1f1;
+    cursor: none;
+    font-size: 1.2em;
+            background-color: #09A050;
+}
+.nav-tabs>li>a{
+    font-size: 1.2em;
+    color: #098E47;
+    font-weight: 200;
+        background: #F3F3F3;
+}
+.btnSiguiente,.btnAtras,.btn-compra{margin-bottom: 15px;}
+.thumbnail {
+   max-width: 99px;
+    height: 135px;
+}
+.thumbnail>p{
+  margin-top: 7px;
+}
+.selected p{
+    color: #fff;
+}
+.nav-tabs {
+  border-bottom: none;
+  text-align: center;
+      margin-top: 40px;
+}
+.page-header {
+  border-bottom: none;
+}
+/*Inicio Menu*/
+#total{
+    font-size: 2em;
+}
+#addCarritoMenu,#btnRegister{
+    margin-bottom: 20px;
+}
+/*Fin menu*/
+/* INICIO LOGIN*/
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/*FIN LOGIN*/
+#btnUbicacion, #btnUbicacion:hover{pointer-events: visible; text-decoration: none;cursor: pointer;}
+.aceptar{margin-bottom: 20px;}
+/*menu normal*/
+.panel-body>img{
+    display: block;
+    max-width: 100%;
+    border: 0;
+    height: auto;
+}
+.panel-body2 {
+    padding: 0px; 
+}
+.precio{float:right;}
+.areasMenu{
+    padding: 10px;
+}
+.areasMenu span{
+    text-transform: uppercase;
+}
+#accordion h4{font-size: 1.3em;}
+ .page-header{margin: 0; padding: 0px;}
+/*fin menu normal*/
+/*MENU DE COMPRAS*/
+#tblPList{
+    margin-top: 13px;
+}
+.products{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none outside;
+    text-align: center;
+}
+.products li{
+    margin: 5px;
+    width: 143px;
+    height: auto;
+    float: left;
+    padding: 8px;
+    background: #fff;
+}
+.products li img{
+   width: 100%;
+cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.product-title{
+        margin: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    color: #333;
+}
+.bGAcordion{
+    background-color: #fff;
+}
+
+.marginBottom{
+  margin-bottom: 35px;
+}
+
+#contentMenuCompra{
+  display: block;
+  margin-bottom: 10px;
+}
+#paniniM{
+display: none;
+}
+#hamburguesaM{
+display: none;
+}
+#sopasM{
+display: none;
+}
+#cremaM{
+display: none;
+}
+#baguetteM{
+display: none;
+}
+#lasagnaM{
+display: none;
+}
+#platillosM{
+display: none;
+}
+#pastasM{
+display: none;
+}
+#frutasM{
+display: none;
+}
+#desayunosM{
+display: none;
+}
+#omelettesM{
+display: none;
+}
+#bebidasM{
+display: none;
+}
+#rPanini, #rHamburguesa, #rSopas, #rCremas, #rBaguettes, #rLasagna, #rPlatillos, #Pastas, #rFrutas, #rDesayunos, #rOmelettes, #rBebidas{
+  margin-bottom: 15px;
+}
+
+/*******************Media Queries************************/
+/* Phones */ 
+@media only screen and (max-width : 480px){
+.container .nav li {display: none;}
+#AjusteMenu{width: 100%;padding-left: 0px;padding-right: 0px;}
+.products{margin-left: -11px;}
+.products li{
+         width: 46%;
+        }
+      .product-title{
+    font-size: 13px;
+}
+#wrap { 
+      margin: 0 auto 0 auto;
+    margin-left: 20px;
+    width: 390px;
+}
+}
+
+/* Tablets */
+@media only screen and (min-width :481px) and (max-width: 768px)  {
+#AjusteMenu{width: 100%;padding-left: 0px;padding-right: 0px;}
+.products li{
+         width: 29%;
+        }
+    .product-title{
+    font-size: 12px;
+
+}
+
+#wrap { 
+         margin: 0 auto 0 auto;
+    /* margin-left: 20px; */
+    width: 560px;
+}
+}
+
+@media only screen and (min-width :481px) and (max-width: 581px)  {
+
+#wrap { 
+         margin: 0 auto 0 auto;
+    width: 460px;
+}
+}
+
+
+ /*pc mediana*/
+ @media only screen and (min-width :769px) and (max-width: 991px) { 
+#AjusteMenu{width: 100%;padding-left: 0px;padding-right: 0px;}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width: 1199px) {
+#AjusteMenu{width: 100%;padding-left: 0px;padding-right: 0px;}
+
+}
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1370px) {
+.table-responsive {
+    height: 310px;
+   
+}
+}
+
+hr {height: 1px; background-color: #EAEAEA;}
+
+
+
+#productsName{
+      font-weight: 200;
+    color: #333;
+}
+
+
+
+.selecciona {
+    padding-top: 20px;
+    font-weight: 200;
+    font-size: 15px;
+    
+}
+
+
+
+#indicacion{
+  color: #757575;
+}

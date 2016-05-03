@@ -1,0 +1,984 @@
+ @font-face{
+    font-family:Harabara;
+     src:url('../fonts/Harabara.ttf');
+    }
+body{
+    margin: auto;
+    padding: 0;
+    font-family: Arial;
+    background-color: #FFF;
+    color: #222;
+    padding: 0 0 65px;
+    margin: 0;
+}
+.page3content{
+      padding-top: 30px;  
+}
+
+.menuitems{
+  padding-top: 25px;
+}
+.clase-general{
+
+}
+footer
+{
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+    height: 65px;
+}
+
+.menuitems2{
+  padding-bottom: 50px;
+}
+.firma{
+  color:#fff;
+  padding-top: 15px;
+  font-weight: 100;
+}
+.textpage3{
+  color:#FFF;
+  font-size: 3.2em;
+  font-weight: 100;
+      padding-top: 90px;
+}
+/*INICIO HEADER*/
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+}
+.menu-fijo {
+    position: fixed;
+    top: 0;
+   z-index: 3;
+}
+#logoBjs{
+    margin-top: 15px;
+    width: 179px;
+    height: 90px;
+}
+#btnLogin, .btn-group{ 
+    float: right;
+    margin-top: 50px;
+    height: 35px;
+    font-size:15px;
+    background-color: #ea675d;
+}
+.btnLogout{
+    font-size:15px;
+    background-color:#ea675d;
+    border-color: #ea675d;
+    color:#fff!important;
+    min-width: 150px;
+}
+#avatarUs{
+    width: 40px;
+    height:40px;
+}
+
+.lineas{
+  padding-top: 10px;
+}
+
+#lineaMenu {
+    border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    border-left: none;
+    border-right: none;
+    height: 2px;
+}
+
+/*FIN HEADER*/
+/*INICIO NAVEGACION*/
+#menuHeader{
+    width: 100%;
+    height: 52px;
+    background: #0bbe5f;
+}
+#navegacion{
+    float: left;
+    list-style: none;
+    width: auto;
+    height: 52px;
+    padding: 0;
+}
+#navegacion li{
+    margin-top: 15px;
+    float: left;
+    text-align: center;
+}
+#navegacion li a{
+    text-decoration: none;
+    font-size: 14px;
+    color:#fff;
+    margin-right: 5px;
+    padding: 16px;
+}
+#navegacion li a:hover{
+   background-color: rgba(255,255,255,0.2);
+}
+#redes{
+    position: relative;
+    float: right;
+    list-style: none;
+    height: 52px;
+    width: 220px;
+}
+#redes li a{
+     text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color:#fff;
+    float: left;
+    width: 45px;
+    padding: 15px;
+    font-weight: 400;
+ 
+}
+#redes li a:hover{
+     background-color: rgba(255,255,255,0.2);  
+    color: #222;
+}
+/*FIN NAVEGACION*/
+/*INICIO NAVEGACION MOBILE*/
+#menuHeaderMobile{display: none;}
+nav.menuMobile{left: -100%;}
+nav.mostrar{left: 0;}
+/*FIN NAVEGACION MOBILE*/
+/*INICIO ANIMACIONES*/
+.retraso-1{
+	-webkit-animation-delay:.5s;
+	-moz-animation-delay:.5s;
+	animation-delay:.5s;
+}
+.retraso-2{
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	animation-delay:1s;
+}
+.retraso-3{
+	-webkit-animation-delay:1.3s;
+	-moz-animation-delay:1.3s;
+	animation-delay:1.3s;
+}
+.retraso-4{
+	-webkit-animation-delay:2s;
+	-moz-animation-delay:2s;
+	animation-delay:2s;
+}
+.zoom{
+     transition: width 0.1s, height 0.1s, transform 0.1s;
+     -moz-transition: width 0.5s, height 0.5s, -moz-transform 0.5s;
+     -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s;
+     -o-transition: width 0.5s, height 0.5s,-o-transform 0.5s;
+    }
+.zoom:hover{
+     transform : scale(1.1);
+     -moz-transform : scale(1.1);     
+     -webkit-transform : scale(1.1);  
+     -o-transform : scale(1.1);  
+    
+}
+/*FIN ANIMACIONES*/
+/*INICIO SLIDER*/
+.carousel{position: relative;float: left;width: 100%;margin-bottom: 15px;}
+.carousel-inner{
+/*top: -72px;*/
+    top:-10px;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  width: 100%;
+}
+
+/*FIN SLIDER*/
+/*INICIO MENU*/
+#contentMuestraM{margin-top: 30px;}
+#titleMuestraMenu1 h2{
+  color: #000;
+  font-size: 24px;
+ font-weight: 500;
+  text-transform: uppercase;
+/*    margin-top: 35px;*/
+}
+#titleMuestraMenu2 a{
+    float: right;
+    margin-top: 10px;
+    font-size: 15px;
+    background: #0bbe5f;
+}
+.contentMenu{
+    border: 1px solid #B5B3B3;
+    min-height: 475px;
+}
+.muestraMenu{
+    margin-bottom: 15px;
+    min-height: 475px;
+}
+.bordeMenu{
+    padding-left: 15px;
+    padding-right: 15px;   
+}
+.muestraMenu img{
+    position:relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;  
+}
+.muestraMenu h3,.contentMenu2 h3{
+    color: #6B1010;
+    font-size: 2em;
+}
+.muestraMenu span,.contentMenu2 span{
+   color: #FF0000;
+   font-size: 22px;
+}
+.muestraMenu p,.contentMenu2 p{
+    text-align: left;
+}
+.contentMenu2{
+     display: none;
+     border: 1px solid #B5B3B3;
+    margin-bottom: 25px;
+}
+
+.page1article{
+  position: absolute;
+  top:-2px;
+}
+
+/*FIN MENU*/
+/*INICIO PARALLAX 1*/
+.pagina1 {
+    width: 100%;
+    height:605px;
+    background-image:url(../img/bgSlider2.jpg);
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+.botonR{
+  background-color: #FFC107;
+  color:white;
+}
+
+.unete{
+  padding-top: 100px;
+  font-size: 30px;
+  color:#DCDCDC;
+  font-family:Harabara;
+}
+.subtext{
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 100;
+}
+.pagina1 h1{
+    padding: 20px;
+    padding-top: 51px;
+    text-shadow: 0px 3px 4px rgba(0,0,0,.6);
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #FFC107;
+   font-family:Harabara;
+    text-transform: uppercase;
+}
+/*FIN PARALLAX 1*/
+/*INICIO ACERCA DE*/
+#contentAbout{
+    color: #DCE6DC;
+    background: #B71422; 
+    padding: 50px 0px;
+}
+#about h3, #serv h3{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 39px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+     font-family:Harabara;
+}
+.subtitle{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#contentAbout p{
+    font-size: 16px;
+}
+#contentAboutheigth, #contentServheigth{
+    margin-bottom: 30px;
+
+}
+/*FIN ACERCA DE*/
+/*INICIO PARALLAX 2*/
+.pagina2 {
+    width: 100%;
+    height:650px;
+    background-image:url(../img/bgSlider3.jpg);
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    margin-top: -23px;
+}
+.pagina2 h1{
+    padding: 20px;
+    padding-top:200px;
+    text-shadow: 0px 3px 4px rgba(0,0,0,.6);
+    font-size: 4em;
+    font-weight: 700;
+     color: #B71422;
+   font-family:Harabara;
+    text-transform: uppercase;
+}
+/*FIN PARALLAX 2*/
+/*SERVICIO A DOMICILIO*/
+#contentServicio{
+    background: #2fbfc6; 
+     color: #FFF;
+    
+}
+
+#maps{
+    width: 100%;
+    height: 405px;
+    margin-bottom: 10px;
+    margin-top: 24px;
+}
+/*FIN SERVICIO A DOMICILIO*/
+/*INICIO CONTACTO*/
+#areaContacto{
+    width: 100%;
+    background-color:#FFF;
+}
+#contacto{
+    margin-top: 30px; 
+    margin-bottom: 15px;
+}
+#areaContacto h3{
+    text-align: center;
+    color: #000;
+     font-weight: bold;
+    border-bottom: 1px solid #B5B3B3;
+    line-height: 39px;
+     text-transform: uppercase;
+}
+#enviarmsj{
+    background-color: #0bbe5f;
+    color: #fff;
+    margin-top: 34px;
+}
+
+/*FIN CONTACTO*/
+/*inicio footer*/
+footer{
+    width: 100%;
+    height: 52px;
+    background: #000;
+    color: #aaa;
+    font-weight: 300;
+}
+footer p{
+    padding-top: 15px;
+}
+/*FIN footer*/
+#actualizarUser{
+    margin-top: 40px;
+}
+/* ********************************** Media Queries ***************************** */
+
+ /*Celular*/ 
+ @media only screen and (max-width : 480px){
+  /*INICIO HEADER*/
+     header{
+    height: 166px;
+      
+}
+
+.lineas{
+  display: none;
+}
+
+.textpage3{
+  color:#FFF;
+  font-size: 2.2em;
+  font-weight: 100;
+}
+.subtext{
+  font-size: 22px;
+}
+    .unete{
+  padding-top: 70px;
+    }
+     header #logoBjs{
+        position: absolute;
+        width: 180px;
+        margin-left: -85px;
+        margin-top: 10px;
+        left: 45%; 
+    }
+     header #btnLogin, header #btnLogout{    
+        position: absolute;
+        margin-left: -50px;
+        margin-top: 110px;
+        left: 40%;    
+         min-width: 150px;
+}
+     /*FIN HEADER*/
+     /* Inicio nav mobile*/
+      #menuHeader{
+      display:none;
+    }
+    .headerMobile{
+    display: block
+}
+    .headerMobile{
+        display: block;
+        top:0;
+        width: 100%;
+        height: 52px;
+        background: #0bbe5f;
+        z-index: 2;
+    }
+    .headerMobile .btn-menu{
+        display:inline-block;
+        margin: 13px;
+        margin-left: 15px;
+        float: left;
+    }
+    .headerMobile span{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .btn-menu span{
+        float: left;
+        font-size: 25px;
+        color: #fff;
+    }   
+    #redesMobile{
+        float: right;
+        list-style: none;
+        height: 52px;
+        width: 190px;
+        padding: 0;
+}
+    #redesMobile li a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        color:#fff;
+        float: left;
+        width: 45px;
+        padding: 15px;
+        
+}
+    #redesMobile li a:hover{
+       background-color: rgba(255,255,255,0.2);  
+    color: #222;
+    }
+    nav.menuMobile{
+        position: absolute;
+        margin-top: 50px;
+        background: #0bbe5f;
+        width: 100%;
+        transition: all .3s;
+        z-index:16;
+    }
+    nav.menuMobile li{
+        list-style: none;
+        margin-left:-40px;
+    }
+    nav.menuMobile li a:hover{
+        background-color: rgba(255,255,255,0.2); 
+    }
+    nav.menuMobile li a{
+        color: #fff;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    /* Fin nav mobile*/
+    /*INICIO SLIDER*/
+    .carousel-inner{
+    top: -10px;
+    }
+     /*FIN SLIDER*/
+     /*INICIO MENU*/
+     #titleMuestraMenu1 h2 {
+         text-align: center;
+         font-size: 1.6em;
+     }
+      #titleMuestraMenu2 a{
+     float: none;
+    position: absolute;
+    margin-left: -65px;
+    left: 45%;
+    }
+     #titleMuestraMenu2{
+        height: 70px;
+    }
+      #contentMuestraM{
+          display: none;
+     }
+     .contentMenu2{
+         display: block;
+     }
+      #titlemenu{
+        margin-top: 20px;
+        padding: 0;
+    }
+     /*FIN MENU*/
+      /*INICIO PARALLAX 1*/
+      .pagina1 h1 {
+    font-size: 30px;
+    padding: 0;
+    margin-top: 70px;
+}
+     /*FIN PARALLAX 1*/
+     .pagina2 h1{font-size: 3em;}
+     /*footer*/
+    footer{
+        font-size: 12px;
+        height: 62px;
+    }
+    footer p{
+/*        padding-top: 50px;*/
+    }
+     /*ajustes ancho about y serv a domicilio*/
+     #contentAbout .container,#contentServicio .container{padding-left: 0;padding-right: 0;}
+     #contentAbout .col-xs-offset-1,#contentServicio .col-xs-offset-1{margin-left: 0;}
+     #contentAbout .col-xs-10,#contentServicio .col-xs-10 {width: 100%;}
+     #actualizarUser{
+    margin-top: 0px;
+}
+  
+}
+
+@media only screen and (min-width :481px) and (max-width: 730px)  {
+.unete{
+  padding-top: 20px;
+}
+.lineas{
+  display: none;
+}
+.textpage3{
+  color:#FFF;
+  font-size: 2.2em;
+  font-weight: 100;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1202px)  {
+.unete{
+  padding-top: 20px;
+}
+.lineas{
+  display: none;
+}
+.textpage3{
+  color:#FFF;
+  font-size: 2.2em;
+  font-weight: 100;
+}
+}
+
+ /* Tablets */
+ @media only screen and (min-width :481px) and (max-width: 768px)  {
+  /*INICIO HEADER*/ 
+     header{
+    height: 166px;
+}  
+.lineas{
+  display: none;
+}
+.unete{
+  padding-top: 50px;
+}
+     .subtext{
+  font-size: 25px;
+}
+
+     header #logoBjs{
+        position: absolute;
+        width: 180px;
+        margin-left: -85px;
+        margin-top: 10px;
+        left: 45%; 
+     }
+     
+     header #btnLogin{    
+        position: absolute;
+        margin-left: -40px;
+        margin-top: 110px;
+        left: 43%;    
+}
+     .btn-group{
+        margin-top: 110px;
+        right: 43%;
+     }
+    /*FIN HEADER*/
+    /* Inicio nav mobile*/
+     #menuHeader{
+      display:none;
+    }
+    .headerMobile{
+    display: block
+}
+    .headerMobile{
+        display: block;
+        top:0;
+        width: 100%;
+        height: 52px;
+        background: #0bbe5f;
+        z-index: 2;
+    }
+    .headerMobile .btn-menu{
+        display:inline-block;
+        margin: 13px;
+        margin-left: 15px;
+        float: left;
+    }
+    .headerMobile span{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .btn-menu span{
+        float: left;
+        font-size: 25px;
+        color: #fff;
+    }   
+    #redesMobile{
+        float: right;
+        list-style: none;
+        height: 52px;
+        width: 190px;
+        padding: 0;
+}
+    #redesMobile li a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        color:#fff;
+        float: left;
+        width: 45px;
+        padding: 15px;
+        
+}
+    #redesMobile li a:hover{
+       background-color: rgba(255,255,255,0.2);  
+    color: #222;
+    }
+    nav.menuMobile{
+        position: absolute;
+        margin-top: 50px;
+        background: #0bbe5f;
+        width: 100%;
+        transition: all .3s;
+       z-index:16;
+    }
+    nav.menuMobile li{
+        list-style: none;
+        margin-left:-40px;
+    }
+    nav.menuMobile li a:hover{
+        background-color: rgba(255,255,255,0.2); 
+    }
+    nav.menuMobile li a{
+        color: #fff;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    /* Fin nav mobile*/
+    /*INICIO SLIDER*/
+    .carousel-inner{
+    top: -10px;
+    }
+     /*FIN SLIDER*/
+     /*INICIO MENU*/
+     #titleMuestraMenu1 h2{text-align: center;}
+     #titleMuestraMenu2 a{
+     float: none;
+     position: absolute;
+     margin-left: -45px;
+     left: 45%;
+    }
+     #titleMuestraMenu2{
+        height: 65px;
+    }
+     .contentMenu{
+         height: 510px;
+     }
+      #titlemenu{
+    margin-top: 20px;
+}
+     /*FIN MENU*/
+     /*INICIO PARALLAX 1*/
+      .pagina1 h1{font-size: 2.8em;}
+     /*FIN PARALLAX 1*/
+     /*PARALLAX 2*/
+     .pagina2 h1{font-size: 2.8em;}
+     /*FIN PARALLAX 2*/
+       /*footer*/
+    footer p{
+    padding-top:20px;
+}
+     /*AJUSTES CONTACTO*/
+  
+       #actualizarUser{
+    margin-top: 0px;
+}
+    }
+ /* IPAD */
+ @media only screen and (min-width :768px) and (max-width: 768px){
+     header{
+         height: 120px;
+     }
+    header #btnLogin{    
+        margin-top: 40px;
+        left: 65%;    
+    }
+      .btn-group{
+          position: absolute;
+        margin-top: 50px;
+       margin-right: -120px;
+     }
+     header #logoBjs{
+        margin-left: -95px;
+        left: 35%; 
+     }
+    #titleMuestraMenu1 h2 {
+     text-align: left; 
+    }
+     /*INICIO MENU*/
+     #titleMuestraMenu2 a{
+    left: 60%;
+}
+     .contentMenu{
+         height: 505px;
+     }
+      #titlemenu{
+    margin-top: 20px;
+}
+     /*FIN MENU*/
+.textpage3{
+  margin-top: -60px;
+}
+}
+ /*pc mediana*/
+ @media only screen and (min-width :769px) and (max-width: 991px) {
+   /* Inicio nav mobile*/
+    #menuHeader{
+      display:none;
+    }
+    .headerMobile{
+    display: block
+}
+    .headerMobile{
+        display: block;
+        top:0;
+        width: 100%;
+        height: 52px;
+        background: #0bbe5f;
+        z-index: 2;
+    }
+    .headerMobile .btn-menu{
+        display:inline-block;
+        margin: 13px;
+        margin-left: 15px;
+        float: left;
+    }
+    .headerMobile span{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .btn-menu span{
+        float: left;
+        font-size: 25px;
+        color: #fff;
+    }   
+    #redesMobile{
+        float: right;
+        list-style: none;
+        height: 52px;
+        width: 190px;
+        padding: 0;
+}
+    #redesMobile li a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        color:#fff;
+        float: left;
+        width: 45px;
+        padding: 15px;
+        
+}
+    #redesMobile li a:hover{
+    background-color: rgba(255,255,255,0.2);  
+    color: #222;
+    }
+    nav.menuMobile{
+        position: absolute;
+        margin-top: 50px;
+        background: #0bbe5f;
+        width: 100%;
+        transition: all .3s;
+       z-index:16;
+    }
+    nav.menuMobile li{
+        list-style: none;
+        margin-left:-40px;
+    }
+    nav.menuMobile li a:hover{
+        background-color: rgba(255,255,255,0.2); 
+    }
+    nav.menuMobile li a{
+        color: #fff;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    /* Fin nav mobile*/
+     /*INICIO SLIDER*/
+    .carousel-inner{
+    top: -10px;
+    }
+     /*FIN SLIDER*/
+     /*INICIO MENU*/
+     .contentMenu{
+         height: 505px;
+     }
+      #titlemenu{
+    margin-top: 20px;
+}
+     /*FIN MENU*/
+     /*INICIO PARALLAX 1*/
+      .pagina1 h1{font-size: 2.8em;}
+     /*FIN PARALLAX 1*/
+       #actualizarUser{
+    margin-top: 0px;
+}
+}
+ /* Dispositivos medianos, Desktops */
+ @media only screen and (min-width : 992px) and (max-width: 1199px)  {
+  
+    /* Inicio nav mobile*/
+    #menuHeader{
+      display:none;
+    }
+    .headerMobile{
+    display: block
+}
+    .headerMobile{
+        display: block;
+        top:0;
+        width: 100%;
+        height: 52px;
+        background: #0bbe5f;
+        z-index: 2;
+    }
+    .headerMobile .btn-menu{
+        display:inline-block;
+        margin: 13px;
+        margin-left: 15px;
+        float: left;
+    }
+    .headerMobile span{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .btn-menu span{
+        float: left;
+        font-size: 25px;
+        color: #fff;
+    }   
+    #redesMobile{
+        float: right;
+        list-style: none;
+        height: 52px;
+        width: 190px;
+        padding: 0;
+}
+    #redesMobile li a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        color:#fff;
+        float: left;
+        width: 45px;
+        padding: 15px;
+        
+}
+    #redesMobile li a:hover{
+        background-color: rgba(255,255,255,0.2);  
+    color: #222;
+    }
+    nav.menuMobile{
+        position: absolute;
+        margin-top: 50px;
+        background: #0bbe5f;
+        width: 100%;
+        transition: all .3s;
+        z-index:16;
+    }
+    nav.menuMobile li{
+        list-style: none;
+        margin-left:-40px;
+    }
+    nav.menuMobile li a:hover{
+        background-color: rgba(255,255,255,0.2); 
+    }
+    nav.menuMobile li a{
+        color: #fff;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    /* Fin nav mobile*/
+     /*INICIO SLIDER*/
+    .carousel-inner{
+    top: -10px;
+    }
+     /*FIN SLIDER*/
+      #titlemenu{
+    margin-top: 20px;
+}
+     
+}
+ /* Dispositivos largos, Pantallas anchas*/
+ @media only screen and (min-width : 1200px) {
+     /* Inicio nav mobile*/
+     .headerMobile{
+         display: none;
+     }
+     /* Fin nav mobile*/
+     /*INICIO SLIDER*/
+      .carousel-inner>.item>.sliderHeight {
+   /*height: 495px;*/
+/*   height: 495px;*/
+}
+      /*FIN SLIDER*/
+     #areaContacto {
+       width: 88%;
+
+}
+
+
+}

@@ -1,0 +1,81 @@
+         <!--INICIO Header-menu -->
+            <nav id="menuHeader">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-offset-1 col-md-10   col-xs-offset-1 col-xs-10">
+                     <ul id="navegacion">
+                        <li><a href="<?php echo $this->url('website-main'); ?>">HOME</a></li>
+                         <li><a href="<?php echo $this->url('store-salads'); ?>">CREA TU ENSALADA</a></li>
+                         <li><a href="<?php echo $this->url('store-combos'); ?>">ARMA TU COMBO</a></li>
+                         <li><a href="<?php echo $this->url('store-products'); ?>">MENÚ DE PRODUCTOS</a></li>
+                         <li><a href="<?php echo $this->url('store-car'); ?>">CARRITO DE COMPRAS</a></li>
+                   </ul>
+ <a href="<?php echo $this->url('store-car'); ?>"> <img src="<?php echo $this->BasePath(); ?>/img/compras.png" alt="carrito de compras" id="logoCarrito" class="zoom"></a>
+                     </div>
+                </div>
+            </div>
+     </nav>
+       <div class="headerMobile">
+            <a class="btn-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <ul id="redesMobile">
+             <li><a href="#"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
+             </ul>
+           <nav class="menuMobile">
+             <ul>
+                <li><a href="<?php echo $this->url('website-main'); ?>"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+                <li><a href="<?php echo $this->url('store-salads'); ?>"><span class="icon-leaf"></span>CREA TU ENSALADA</a></li>
+                 <li><a href="<?php echo $this->url('store-combos'); ?>"><span class="glyphicon glyphicon-cutlery"></span>ARMA TU COMBO</a></li>
+                <li><a href="<?php echo $this->url('store-products'); ?>"><span class="glyphicon glyphicon-cutlery"></span>MENÚ DE PRODUCTOS</a></li>
+                <li><a href="<?php echo $this->url('store-car'); ?>"><span class="icon-cart"></span>CARRITO DE COMPRAS</a></li> 
+
+            </ul>
+         </nav>
+     </div>
+    <!--FIN Header-menu -->
+<div class="container">
+
+	<div class="form-signin">
+		 <h2 class="form-signin-heading text-center">Iniciar Sesión</h2>
+		 <?php if ($this->flashMessenger()->hasMessages()){ ?>
+				<div id="message_register" class="alert alert-danger fade in col-md-12 text-center">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong><?php echo $this->flashMessenger()->getMessages()[0]; ?></strong>
+      	</div>
+			<?php } ?>		
+			<?php
+				// within a view script
+				$form = $this->form;
+				$form->prepare();
+
+				// Assuming the "contact/process" route exists...
+				$form->setAttribute('action', $this->BasePath() . '/user-auth');
+
+				// Set the method attribute for the form
+				$form->setAttribute('method', 'post');
+
+				// Get the form label plugin
+				$formLabel = $this->plugin('formLabel');
+
+				// Render the opening tag
+				echo $this->form()->openTag($form);
+				$email = $form->get('email');
+			    echo $this->formInput($email);
+			    echo $this->formElementErrors($email);
+
+			    $password = $form->get('password');
+			    echo $this->formInput($password);
+			    echo $this->formElementErrors($password);
+
+			    echo $this->formElement($form->get('send'));
+
+			    echo $this->form()->closeTag();
+			?>
+
+			<span>¿No tienes una cuenta? <a href="<?php echo $this->url('users-register'); ?>">Registrate</a></span>
+			<br>
+			
+	</div>
+</div>
